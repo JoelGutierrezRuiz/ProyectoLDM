@@ -1,0 +1,781 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	color: black;
+}
+
+
+
+
+
+
+
+
+/*Body*/
+body{
+	background-color: #EDEEE8;
+}
+/**/
+
+
+/*Contenedor del navegador*/
+.container-navbar{
+	margin-bottom: 50px;
+	z-index: 2;
+	top: -1px;
+	position: sticky;
+	background-color: rgb(237, 238, 232);
+
+}
+/**/
+
+
+/*Contenedor de la cabecera*/
+.container-cabecera{
+	background-color: rgb(244, 234, 215);
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content:flex-start;
+	width: 100%;
+	height:70px;
+}
+.cabecera-usuario-container{
+	position: absolute;
+	right:15%;
+	width: 25%;
+	height: 100%;
+	display: flex;
+}
+.cabecera-inicio-container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+}
+
+
+.cabecera-inicio-container a{
+	color: black;
+	text-decoration: none;
+
+}
+
+
+
+.cabecera-registro-container{
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.container-idiomas{
+	position:relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: auto;
+	height: 100%;
+	width: 15%;
+}
+.container-idiomas img{
+	width: 35px;
+	height: 35px;
+	object-fit: contain;
+}
+
+.container-idiomas-options{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 00px;
+	background-color: #F4EAD7;
+	transition: height 1s;
+	opacity: 0;
+}
+
+.container-idiomas-options a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 50%;
+
+}
+
+.container-idiomas:hover>.container-idiomas-options{
+	height: 100%;
+	opacity: 1;
+}
+
+
+.cabecera-logo-container{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width:25%;
+	height: 100%;
+}
+.cabecera-logo-container img{
+	min-width: 150px;
+	width:100%;
+	height:90%;
+	object-fit: contain;
+	opacity: 1;
+	animation: logo 3s;
+}
+/*Animacion logo*/
+@keyframes logo {
+	0%{
+		opacity: .2;
+	}
+
+	100%{
+		opacity: 1;
+	}
+}
+/**/
+
+
+
+/*Menu*/
+nav{
+	position: relative;
+	height: 50px ;
+	width:100%;
+	transition: background-color .5s;
+}
+nav:hover{
+	animation: nav 1s;
+	background-color: #c7c7c3;
+}
+.navbar{
+	height: 100%;
+	width: 90%;
+	display: flex;
+	justify-content:space-evenly;
+	list-style: none;
+}
+.navbar-component{
+	height: 100%;
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor:pointer;
+
+}
+/*Opciones menu*/
+.navbar-component a{
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 20px;
+	color: black;
+	
+	transition: font-size 0.5s;
+}
+
+
+/*Hover*/
+.navbar-component a:hover{
+	font-size: 25px;
+}
+/**/
+
+
+
+
+/*Portada*/
+.container-contenido{
+	display: flex;
+	justify-content: center;
+	width:100%;
+	height:500px;
+}
+.container-img-principal{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	width: 90%;
+	height: 100%;
+}
+img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.blured-img{
+	position: absolute;
+	background-color: black;
+	width:100%;
+	opacity: .4;
+	height: 100%;
+	animation: portada 3s;
+}
+/*Animacion portada*/
+@keyframes portada {
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: .4;
+	}
+}
+.paper-img{
+	animation: paper 3s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width:100%;
+	height: 100%;
+}
+.paper-img p{
+	text-align: center;
+	width: 90%;
+	color: white;
+	font-size: 30px;
+	font-weight: 500;
+}
+/**/
+/*Animacion de texto en portada*/
+@keyframes paper {
+	0%{
+		opacity: 0;
+	}
+
+	100%{
+		opacity: 1;
+	}
+}
+/**/
+
+
+
+
+/*descripcion*/
+
+.container-descripcion{
+	margin-top: 50px;
+	width: 100%;
+	height: 500px;
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+.container-descripcion-texto{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 85%;
+
+
+}
+ .container-descripcion-texto p {
+	text-align: center;
+	font-size: 25px !important;
+
+}
+
+.container-descripcion-accesoCatalogo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width:450px;
+	height: 15%;
+	border-radius: 20px;
+	background-color: wheat;
+}
+
+.container-descripcion-accesoCatalogo:hover{
+	cursor: pointer;
+}
+
+.container-descripcion-accesoCatalogo{
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+
+}
+
+
+/**/
+
+
+
+
+/*Contenedor de anuncios*/
+.container-anuncios{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	position: relative;
+	width: 100%;
+	height:500px;
+}
+.anuncio{
+	position: relative;
+	width: 45%;
+	display: flex;
+	justify-content: space-evenly;
+}
+.anuncio video{
+	object-fit: cover;
+	height:250px;
+	width: 100%;
+}
+/**/
+
+
+
+
+
+/*Catalogo*/
+
+/*Contenedor de todos los catalogos*/
+.container-catalogos{
+	display: flex;
+	flex-wrap: wrap;
+	width:100%;
+	height: 100%;
+}
+/*Contenedor general de un catalogo*/
+.container-catalogo{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 100%;
+	height: 25%;
+	margin: 10px;
+
+}
+.nombre-categoria{
+	margin-top: 20px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex-grow: 1;
+	border-top:2px solid gray;
+
+}
+.catalogo{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	position: relative;
+
+
+}
+.catalogo h2{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+}
+.catalogo img{
+	width: 100%;
+	height: 100%;
+	max-height:350px;
+	object-fit: contain;
+}
+.catalogo img:hover{
+	cursor: pointer;
+}
+
+.boton-catalogo{
+	width: 100%;
+	align-self: flex-end;
+	margin: auto;
+	position: absolute;
+	margin-top: 15px;
+	width:90%;
+	height: 30px;
+	background-color: rgb(150, 240, 120);
+	border: none;
+	
+}
+
+.boton-catalogo:hover{
+	cursor: pointer;
+}
+
+#nocomprado{
+	background-color: gray;
+	color: white;
+}
+
+/*Dentro del catalogo hay otro contenedor para enseñar el video*/
+.container-film-info{
+	align-self: flex-end;
+	background-color: rgba(0, 0, 0, 0.154);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+}
+.catalogo video{
+	opacity: 0;
+	position: absolute;
+	width: 70%;
+	height: 100%;
+	object-fit: cover;
+	transition: opacity 1s;
+}
+.catalogo:hover > video{
+	opacity: 1;
+}
+/**/
+
+
+
+
+
+
+
+
+
+/*Contenedor general de la pelicula FINAL*/
+.container-pelicula{
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 500px;
+}
+.container-pelicula-info{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	z-index:1;
+	width: 50%;
+	max-width:550px;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.707);
+}
+
+
+.logo-film{
+	width: 150px;
+	height: 150px;
+	object-fit: contain;
+}
+.desc-film{
+	font-size: 20px;
+	width: 90%;
+	color: white;
+}
+.buy-film{
+	display: none;
+}
+/*Dentro del contenedor general tenemos contenedor del video*/
+.container-video-pelicula{
+	width: 100%;
+	height: 100%;
+}
+.container-video-pelicula video{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: black;
+	object-fit: contain;
+}
+
+
+/*comprados o no*/
+
+#comprado{
+	display: none;
+}
+
+#nocomprado{
+	display: block;
+}
+
+/**/
+
+
+
+
+/*Reparto*/
+.container-reparto{
+	margin-top: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	position: relative;
+	width: 100%;
+	height: 300px;
+
+}
+.reparto{
+	position: relative;
+	width: 25%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.reparto-foto{
+	position: relative;
+	border-radius: 10px;
+	width:100%;
+	max-width:250px;
+	max-height:250px;
+	object-fit: contain;
+}
+.reparto-nombre-actor{
+	width: 100%;
+	text-align: center;
+}
+/**/
+
+
+
+
+
+/*Inicio de sesion*/
+
+.container-general-login{
+
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.container-login{
+
+	width: 50%;
+	height: 100%;
+	justify-content: center;
+	background-color: rgb(173, 170, 170);
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.container-login-input{
+
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 90px;
+	padding: 0 15px;
+}
+
+.container-login-input h3{
+	height: 25px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 10px;
+	font-size: 15px;
+	width: 100%;
+}
+
+.container-login-input input{
+	margin: auto;
+	border: none;
+	width:60%;
+	height: 35px;
+	border-radius: 20px;
+	padding: 10px;
+
+}
+
+.container-login-input input:focus{
+	outline: none;
+
+}
+
+.container-login-input-boton{
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	height:60px;
+	width: 100%;
+	margin-top: 30px;
+}
+
+.container-login-input-boton button{
+	width: 60%;
+	height: 50px;
+	border: none;
+	border-radius: 20px;
+	background-color: orangered;
+}
+
+.container-login-register{
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 150px;
+	background-color: white;
+}
+
+.container-login-register a{
+	font-weight: 600;
+	color: orangered;
+	font-size: 17px;
+}
+
+
+
+
+/*Footer*/
+footer{
+	padding: 50px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	height: 200px;
+	width: 100%;
+	margin-top: 100px;
+	background-color: rgb(245, 222, 179);
+
+}
+
+
+.footer-class{
+	width: 100%;
+}
+
+
+footer img{
+	object-fit: contain;
+	width: 90px;
+	height: 90px;
+}
+
+
+
+/*error*/
+
+.container-error{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width:100%;
+	height: 100vh;
+	background-color: gray;
+
+}
+
+
+
+
+/*Responsive general*/
+@media (max-width:950px){
+
+
+	.anuncio img{
+		object-fit: contain;
+		height:300px;
+		width: 100%;
+	}
+
+	.paper-img p{
+		font-size: 20px;
+	}
+
+
+	.acceso-catalogo p{
+		font-size: 25px;
+	}
+
+	.catalogo img{
+		max-width: 150px;
+		min-height:100px;
+		max-height:150px;
+	}
+
+	/*pelicula reproductor*/
+
+
+
+	.container-pelicula-info{
+		min-width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.649);
+
+	}
+
+	.buy-film{
+		display: inline;
+		width: 100px;
+		height: 50px;
+	}
+
+.container-pelicula:hover>	.container-pelicula-info
+	{
+
+		z-index: -100;
+	}
+
+
+	.reparto-foto{
+		max-width:100px;
+		max-height:100px;
+	}
+
+	.reparto-nombre-actor{
+
+		align-self: flex-start;
+	}
+
+		/*comprado no comprado*/
+
+		#nocomprado{
+			display: block;
+		}
+
+	/**/
+
+	*{
+		font-size: 10px;
+	}
+
+	h2{
+		font-size: 15px;
+	}
+	.container-idiomas-options{
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		width: 100%;
+		height: 100%;
+		background-color: #F4EAD7;
+		transition: height 1s;
+		opacity: 1;
+	}
+
+
+
+	
+}
