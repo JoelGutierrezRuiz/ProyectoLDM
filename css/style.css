@@ -34,6 +34,10 @@ body{
 	width: 100%;
 	height:70px;
 }
+.container-cabecera-sesion{
+	position:relative;
+
+}
 .cabecera-usuario-container{
 	position: absolute;
 	right:15%;
@@ -232,8 +236,8 @@ img{
 	text-align: center;
 	width: 100%;
 	color: white;
-	font-size: 25px;
-	font-weight: 300;
+	font-size: 40px;
+	font-weight: 500;
 	height:65%;
 }
 
@@ -295,6 +299,22 @@ img{
 
 }
 
+.studiosbanner{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+
+}
+
+.studiosbanner img{
+	width: 100px;
+	height: 100px;
+	object-fit: contain;
+	
+}
+
 
 /**/
 
@@ -319,6 +339,7 @@ img{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 
 }
 
@@ -335,14 +356,27 @@ img{
 
 
 .tvcontainer{
+	position: relative;
 	width:50%;
 	height: 100%;
 }
 
 .tvcontainer img{
-	width: 100%;
-	height: 100%;
+	margin-right: 15px;
+	position: absolute;
+	width:650px;
+	height: 650px;
 	object-fit: contain;
+	z-index: 100;
+}
+.tvvideo{
+	margin-left: 25px;
+	margin-top: 7px;
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	object-fit: contain;
+	z-index: 100;
 }
 
 
@@ -586,98 +620,82 @@ img{
 
 
 
+/*inicio de sesión*/
 
-
-/*Inicio de sesion*/
-
-.container-general-login{
-
-	width: 100%;
-	height: 100%;
+.login{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-color: black;
 
 }
 
-.container-login{
-
-	width: 50%;
+.loginback{
+	width: 100%;
 	height: 100%;
-	justify-content: center;
-	background-color: rgb(173, 170, 170);
-	display: flex;
-	flex-wrap: wrap;
+	position: absolute;
+	opacity: .3;
+	object-fit: cover;
+}
+
+.login-form{
+	padding: 50px;
+	z-index:100;
+	width: 500px;
+	height: 80%;
+	background-color: rgba(0, 0, 0, 0.493);
 
 }
 
-.container-login-input{
-
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	width: 100%;
-	height: 90px;
-	padding: 0 15px;
-}
-
-.container-login-input h3{
-	height: 25px;
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	padding: 10px;
-	font-size: 15px;
-	width: 100%;
-}
-
-.container-login-input input{
-	margin: auto;
-	border: none;
-	width:60%;
-	height: 35px;
-	border-radius: 20px;
-	padding: 10px;
-
-}
-
-.container-login-input input:focus{
-	outline: none;
-
-}
-
-.container-login-input-boton{
-	display: flex;
-	justify-content: center;
-	align-items:center;
-	height:60px;
-	width: 100%;
-	margin-top: 30px;
-}
-
-.container-login-input-boton button{
-	width: 60%;
-	height: 50px;
-	border: none;
-	border-radius: 20px;
-	background-color: orangered;
-}
-
-.container-login-register{
+.login-container{
 	margin-top: 20px;
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	width: 100%;
-	height: 150px;
-	background-color: white;
+	flex-direction: column;
+	width:100%;
+	height: 80%;
+
 }
 
-.container-login-register a{
-	font-weight: 600;
-	color: orangered;
-	font-size: 17px;
+.login-form h2{
+	font-size: 35px;
+	color: white;
 }
+
+.login-form input{
+	padding: 15px;
+	border-radius: 2px;
+	margin-top: 25px;
+	border: none;
+	width: 70%;
+	height: 47px;
+}
+
+.login-form input::placeholder{
+	font-size:15px;
+}
+.login-form input:focus{
+	border: none;
+}
+
+.boton-login{
+	cursor: pointer;
+	border: none;
+	border-radius: 2px;
+	margin-top: 40px;
+	width: 70%;
+	height: 40px;
+	background-color:#1CE783 ;
+	font-size: 20px;
+}
+
+
+/**/
+
+
 
 
 
@@ -686,6 +704,7 @@ img{
 footer{
 
 	display: flex;
+	flex-wrap: wrap;
 	justify-content:center;
 	height: 400px;
 	width: 100%;
@@ -694,7 +713,7 @@ footer{
 }
 
 .tecnologiasUsadas{
-
+	margin-bottom: 20px;
 	align-self: flex-end;
 	border-top: 1px solid black;
 	width: 90%;
@@ -713,6 +732,17 @@ footer{
 	height:35px;
 	object-fit: contain;
 
+}
+
+.infofooter{
+	margin-top: 60px;
+	width: 90%;
+	height: 200px;
+
+}
+.infofooter a{
+	margin: 10px;
+	display: block;
 }
 
 
