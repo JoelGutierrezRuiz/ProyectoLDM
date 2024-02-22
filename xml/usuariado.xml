@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<usuariado>
+	<perfil id="0">
+		<nombre>root</nombre>
+		<mail>root@vereflix.es</mail>
+		<usuario>root</usuario>
+		<contrasenya>123456</contrasenya>
+	</perfil>
+	<perfil id="1">
+		<nombre>Andrés de Fonollosa</nombre>
+		<mail>andresF@gmail.com</mail>
+		<usuario>Berlin</usuario>
+		<contrasenya>bellachao</contrasenya>
+	</perfil>
+	<perfil id="2">
+		<nombre>La mesías</nombre>
+		<mail>flos@mariae.es</mail>
+		<usuario>mesias</usuario>
+		<contrasenya>vivaelpapa</contrasenya>
+	</perfil>
+</usuariado>
