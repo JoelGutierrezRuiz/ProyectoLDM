@@ -502,24 +502,18 @@ img{
 	height: 200px;
 	padding-left: 30px;
 	margin-top: 120px;
-	overflow: auto;
+	overflow-x: scroll;
 }
 
-.peli-catalogo{
-	flex-grow: 1;
-	min-width: 300px;
-	height: 100%;
-	margin: 0 2px;
-	background-color: blue;
 
-}
-
-.peli-catalogo img{
-	min-width: 400px;
-	min-height:190px;
-	object-fit: cover;
-
-}
+.peli-catalogo {
+	min-width: 300px; /* Ancho deseado del contenedor */
+	min-height: 150px; /* Altura deseada del contenedor */
+	background-image: url('https://cinescopia.com/wp-content/uploads/2015/02/a_most_violent_year_2014_movie-1440x900.jpg'); /* Ruta de tu imagen */
+	background-size: cover; /* Escalar la imagen para que cubra todo el contenedor */
+	background-position: center; /* Centrar la imagen */
+	margin-left: 3px;
+  }
 
 
 
