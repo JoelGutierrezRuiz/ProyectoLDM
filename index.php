@@ -1,3 +1,26 @@
+
+<?php
+    session_start(); //indicamos que vamos a usar sesiones
+
+
+	if (isset($_SESSION["username"])){
+		
+		echo $_SESSION["username"];
+
+		header("Location: html/catalogo.php");
+	}
+
+
+
+?>
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

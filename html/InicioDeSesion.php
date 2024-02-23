@@ -1,7 +1,17 @@
 
-
 <?php
-	session_start(); //indicamos que vamos a usar sesiones
+    session_start(); //indicamos que vamos a usar sesiones
+
+
+	if (isset($_SESSION["username"])){
+		
+		echo $_SESSION["username"];
+
+		header("Location: catalogo.php");
+	}
+
+
+
 ?>
 
 
@@ -159,8 +169,12 @@
 								
 				if(aux===login){
 					falloLogin.style.opacity=0;
-					console.log("Has entrado")
 					entrado=true;
+					if(entrado){
+						inicioDeSesion(login);
+					}
+
+					
 				}else{
 					falloLogin.style.opacity=1;
 					usser.value="";
@@ -175,6 +189,31 @@
 
 
 		}
+
+		
+		function inicioDeSesion(ussername){
+
+
+			
+			let data = new FormData();
+			data.append('usser', ussername);
+			var xhttp2 = new XMLHttpRequest();
+			
+			//xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xhttp2.onreadystatechange = function() {
+				if (this.readyState === 4 || this.status === 200){ 
+					location.href = 'catalogo.php';
+				}       
+			};
+			xhttp2.open("POST", "login3.php", true);
+			xhttp2.send(data);
+
+
+		}
+
+
+
+
 
 	</script>
 
