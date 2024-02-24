@@ -3,6 +3,16 @@
 
 <?php
 	session_start(); //indicamos que vamos a usar sesiones
+	//comprobamos si la sesión está iniciada
+	if (!(isset($_SESSION["username"]))){
+	   
+		header("Location: ../index.php");
+		
+	}
+
+	$xml = simplexml_load_file("../xml/peliculas.xml");
+
+
 ?>
 
 
@@ -16,147 +26,110 @@
 </head>
 <body>
 
-<?php
-        echo $_SESSION["username"];
-        //comprobamos si la sesión está iniciada
-        if (isset($_SESSION["username"])){
-           ?>
-           <h1> ¡¡ BIEN !! ESTAS DENTRO CON UNA SESIÓN </h1>
-            <form method="POST" action="cerrar_sesion.php">
-                <button type="submit">Cerrar Sesión</button>
-            </form>
-           <?php 
-        }else{
-    ?>
-       <h1> ¡¡ ERROR !! NO ESTAS DENTRO CON UNA SESIÓN </h1>
-            <form method="POST" action="login.php">
-                <button type="submit">Iniciar Sesión</button>
-            </form>
-    <?php
-        }
-    ?>
-
-
 
 	<header class="cabecera">
-
-
 
 		<div class="cabecera-comp comp-logo">
 			<h2>HULU</h2>
 		</div>
 
 		<div class="cabecera-comp comp-usser ">
-
 			<h3 class="buscar">Buscar</h3>
-
 			<img src="../img/usser.png">
-				
 			<ul>
 				<li><a>Configuración</a></li>
-				<li><a>Cerrar sesión</a></li>
-					
+				<li><form method="POST" action="cerrar_sesion.php">
+                <button type="submit">Cerrar Sesión</button></form></li>
 			</ul>
-
 		</div>
-
-
 	</header>
 
 
-	<section class="catalogo">
 
 
-		<div class="peli-catalogo">
 
 
+
+	<?php
+			// 1. Abrir el archivo XML
+
+		
+
+
+			$pelis = array();
+
+			
+
+
+		foreach ($xml->categoria as $categoria) {
+
+			foreach ($categoria->pelicula as $pelicula) {
+				array_push($pelis,$pelicula);
+
+
+			}
+				
+		}
+
+		$tamaño = count($pelis)-1;
+		$random = (rand(0,$tamaño));
+		$pelirecomend = $pelis[$random];
+
+		$banner = $pelirecomend->banner['src'];
+		$titulo = $pelirecomend->titulo;
+		$sipnosis = $pelirecomend->sipnosis;
+		$anyo = $pelirecomend->anyo;
+
+		echo "<section class='recomendation'>
+
+		<div class='recomendation-info'>
+
+			<h2 class='recomendation-title'>$titulo</h2>
+			<h3 class='recomendation-sipnosis'>$sipnosis.</h3>
+			<p class='recomendation-year'>$anyo</p>
 		</div>
 
-		<div class="peli-catalogo">
+		<div style='background-image: url($banner);' class='recomendation-banner'> <div class='recomendation-bannervisual'></div> </div>
 
-		</div>
+		</section>";
 
-		<div class="peli-catalogo">
-
-		</div>
-
-		<div class="peli-catalogo">
-
-		</div>
-
-		<div class="peli-catalogo">
-
-		</div>
-
-		<div class="peli-catalogo">
-		</div>
+			
+	?>
 
 
 
 
-	</section>
-
-	<section class="catalogo">
-
-		<div class="peli-catalogo">
-
-
-		</div>
-
-		<div class="peli-catalogo">
-
-		</div>
-
-		<div class="peli-catalogo">
-
-		</div>
-
-		<div class="peli-catalogo">
-
-		</div>
-
-		<div class="peli-catalogo">
-
-		</div>
-
-		<div class="peli-catalogo">
-		</div>
 
 
 
+	<?php
+			// 1. Abrir el archivo XML
 
-	</section>
+		foreach ($xml->categoria as $categoria) {
 
-	<section class="catalogo">
+			$nombre_categoria = $categoria['nombre'];
 
-		<div class="peli-catalogo">
+			echo "<h2 class='titulocat'>$nombre_categoria</h2>";
+			echo "<section class='catalogo'>";
 
+				foreach ($categoria->pelicula as $pelicula) {
 
-		</div>
+					$banner = $pelicula->banner['src'];
+					$portada = $pelicula->portada['src'];
+					$titulo = $pelicula->titulo;
+					$sipnosis = $pelicula->sipnosis;
+					$anyo = $pelicula->anyo;
 
-		<div class="peli-catalogo">
+					echo "<div style='background-image: url($banner);' class='peli-catalogo'></div>";
+				}
+				
+				echo "</section>";
+			}
 
-		</div>
-
-		<div class="peli-catalogo">
-
-		</div>
-
-		<div class="peli-catalogo">
-
-		</div>
-
-		<div class="peli-catalogo">
-
-		</div>
-
-		<div class="peli-catalogo">
-		</div>
+			
+	?>
 
 
-
-
-	</section>
 
 
 	<footer>

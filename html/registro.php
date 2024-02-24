@@ -12,16 +12,9 @@
 
 
 
+
+
 ?>
-
-
-
-
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -93,14 +86,14 @@
 
 			<h2>Registrate</h2>
 
-			<div class="login-container">
+			<form  method="POST" action="registro2.php" class="login-container">
+				<input name="name" placeholder="Nombre" type="text">
+				<input name="usser" placeholder="Nombre de usuario" type="text">
+				<input name="mail" placeholder="Dirección de correo electrónico" type="email">
+				<input name="password" placeholder="Contraseña" type="password">
+				<button type="submit" class="boton-login">Registrate</button>
 
-				<input placeholder="Nombre de usuario" type="text">
-				<input placeholder="Dirección de correo electrónico" type="email">
-				<input placeholder="Contraseña" type="password">
-				<button class="boton-login">Registrate</button>
-
-			</div>
+			</form>
 
 
 

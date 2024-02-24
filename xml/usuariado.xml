@@ -12,10 +12,13 @@
 		<usuario>Berlin</usuario>
 		<contrasenya>bellachao</contrasenya>
 	</perfil>
+
+	
 	<perfil id="2">
 		<nombre>La mesías</nombre>
 		<mail>flos@mariae.es</mail>
 		<usuario>mesias</usuario>
 		<contrasenya>vivaelpapa</contrasenya>
 	</perfil>
-</usuariado>
+	
+<perfil id="3"><nombre>Joel</nombre><mail>Gutierrez@gmail.com</mail><usuario>Joelote</usuario><contrasenya>198024</contrasenya></perfil><perfil id="4"><nombre>Joel</nombre><mail>Gutierrez@gmail.com</mail><usuario>user1</usuario><contrasenya>adasdasdadadasd</contrasenya></perfil></usuariado>

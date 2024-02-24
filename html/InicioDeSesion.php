@@ -150,6 +150,8 @@
 		function iniciarSesion(){
 			let xml = xhttp.responseXML
 
+			console.log(xml)
+
 			let falloLogin = document.getElementById("fallologin");
 
 			let usser = document.getElementById("usser");
@@ -166,7 +168,8 @@
 			do{
 				
 				let aux = ussers[index].childNodes[0].nodeValue+passwords[index].childNodes[0].nodeValue;
-								
+				console.log( "Tamaño array: "+ussers.length)
+				console.log( "Iteracion: "+index)
 				if(aux===login){
 					falloLogin.style.opacity=0;
 					entrado=true;

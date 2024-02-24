@@ -64,6 +64,7 @@ body{
 /*Cabecera catalogo*/
 
 .cabecera{
+
 	position: relative;
 	display: flex;
 	justify-content: space-between;
@@ -507,6 +508,7 @@ img{
 	position: relative;
 	width: 100%;
 	height:500px;
+
 }
 .anuncio{
 	position: relative;
@@ -523,23 +525,139 @@ img{
 
 
 
+/*recomendacion*/
+
+
+.recomendation{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 450px;
+}
+
+.recomendation-info{
+	color: white;
+	position: absolute;
+	z-index: 100;
+	width: 50%;
+	height: 100%;
+	margin:50px;
+
+}
+
+.recomendation-sipnosis{
+	color: rgba(205, 203, 203, 0.832);
+	padding:0 15%;
+	font-size: 17px;
+	letter-spacing:.5px;
+
+}
+
+.recomendation-year{
+	color: white;
+	font-weight: 400;
+	font-size: 15px;
+	margin-top: 60px;
+	margin-left: 30%;
+
+}
+
+.recomendation-title{
+	color: white;
+	padding-left:15%;
+	margin: 15px 0;
+	font-size: 35px;
+}
+
+.recomendation-banner{
+
+	margin-left: auto;
+	border-radius: 20px 0 0 20px;
+	position: relative;
+	min-width:60% ;
+	min-height: 100%;
+	background-size: cover; /* Escalar la imagen para que cubra todo el contenedor */
+	background-position: center;
+
+}
+
+
+
+
+
+.recomendation-bannervisual{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to left, #1ce78154, rgba(0, 0, 0, 0.893)); /* 
+	Gradiente lineal transparente a blanco */
+}
+
+.recomendation-bannervisual:hover{
+	cursor: pointer;
+}
+
+
+/**/
+
+
+/*catalogo*/
+
+
+
 .catalogo{
 	display: flex;
 	width: 100%;
 	height: 200px;
 	padding-left: 30px;
-	margin-top: 110px;
+	padding: 3px 0 3px 30px;
 	overflow-x: scroll;
+	margin-top: 15px;
+
+
 }
 
 
 .peli-catalogo {
+	cursor: pointer;
 	min-width: 300px; /* Ancho deseado del contenedor */
 	min-height: 150px; /* Altura deseada del contenedor */
-	background-image: url('https://pics.filmaffinity.com/A_Most_Violent_Year-501186899-large.jpg'); /* Ruta de tu imagen */
+	 /* Ruta de tu imagen */
 	background-size: cover; /* Escalar la imagen para que cubra todo el contenedor */
 	background-position: center; /* Centrar la imagen */
 	margin-left: 3px;
+  }
+
+  .peli-catalogo:hover {
+
+	border: 2px solid  #1CE783 ;
+
+	animation-duration:.5s;
+	animation-fill-mode: forwards; 
+	animation-name: bordePeli;
+
+  }
+
+
+
+
+@keyframes bordePeli {
+	0%{
+		border-color:#1ce78112 ;
+	}
+	100%{
+		border-color:#1CE783 ;
+	}
+}
+
+
+
+  .titulocat{
+	padding-left: 30px;
+	margin-top: 30px;
+	font-size:30px;
+	color: white;
+
   }
 
 
@@ -777,21 +895,71 @@ footer{
 
 
 
+/*creador pelis*/
 
-/*error*/
 
-.container-error{
+.creadorpelis{
+	width: 100%;
+	height: 600px;
+	background-color: white;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
 	align-items: center;
-	width:100%;
-	height: 100vh;
-	background-color: gray;
-
+	justify-content: center;
 }
 
 
+.creadorpelisimg{
+	padding: 5px;
+	display: flex;
 
+	justify-content: space-between;
+	width:600px;
+	background-color: black;
+	height: 200px;
+}
+
+.creadorpelisportada{
+	min-width:35% ;
+	min-height: 100%;
+	background-size: cover; 
+	background-position: center;
+}
+
+.creadorpelisbanner{
+	min-width:64% ;
+	min-height: 100%;
+	background-size: cover;
+	background-position: center;
+}
+
+.creadorpelisinputs{
+	padding: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width:600px;
+	height:100px;
+	background-color: black;
+
+}
+
+.creadorpelis input{
+	height: 20px;
+
+}
+
+.creadorpelisinputportada{
+
+	width: 35%;
+
+}
+
+.creadorpelisinputbanner{
+	width: 64%;
+}
+
+/**/
 
 /*Responsive general*/
 @media (max-width:950px){

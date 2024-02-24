@@ -1,0 +1,70 @@
+<categorias>
+
+
+    <categoria nombre="Drama">
+
+        <pelicula>
+            <banner src="../img/casino.jpg"></banner>
+            <portada src="portada.png"></portada>
+            <video src="portada.png"></video>
+            <anyo>2019</anyo>
+            <titulo>A Most violent year</titulo>
+            <sipnosis>Dune es una tierra lejana mas allá del oceano</sipnosis>
+
+            <reparto>
+
+                <actor>
+                    <retrato src="retrato.png"></retrato>
+                    <nombre>Oscaar Isaac</nombre>
+                </actor>
+
+                <actor>
+                    <retrato src="retrato2.png"></retrato>
+                    <nombre>Timothee chamlet</nombre>
+                </actor>
+
+            </reparto>
+
+
+
+        </pelicula>
+
+        
+        
+
+    </categoria>
+
+    <categoria  nombre="Acción">
+
+        <pelicula>
+            <banner src="https://cdn.theplaylist.net/wp-content/uploads/2020/09/14184858/a-most-violent-year.jpg"></banner>
+            <portada src="portada.png"></portada>
+            <titulo>A Most violent year</titulo>
+            <sipnosis>Dune es una tierra lejana mas allá del oceano</sipnosis>
+
+            <reparto>
+
+                <actor>
+                    <retrato src="retrato.png"></retrato>
+                    <nombre>Oscaar Isaac</nombre>
+                </actor>
+
+                <actor>
+                    <retrato src="retrato2.png"></retrato>
+                    <nombre>Timothee chamlet</nombre>
+                </actor>
+
+            </reparto>
+
+
+
+        </pelicula>
+
+        
+        
+
+    </categoria>
+
+
+
+</categorias>
