@@ -19,6 +19,20 @@ if(strlen($name)<3){
 }
 
 
+
+if(strlen($username)>15){
+	header("Location: registro.php");
+}
+if(strlen($password)>15){
+	header("Location: registro.php");
+}
+if(strlen($name)>10){
+	header("Location: registro.php");
+}
+
+
+
+
 echo $mail;
 echo $username;
 echo $password
@@ -54,11 +68,7 @@ function myFunction(response) {
 
 	}
 	else{
-
-
 		location.href = 'registro.php';
-
-
 	}
 
 
