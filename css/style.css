@@ -900,12 +900,20 @@ footer{
 
 .creadorpelis{
 	width: 100%;
-	height: 600px;
-	background-color: white;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	padding: 20px;
+}
+
+.creadorpelistit{
+	padding-left: 20px;
+	font-size: 20px;
+	margin: 5px;
+	width:600px;
+	height: 60px !important;
 }
 
 
@@ -915,8 +923,7 @@ footer{
 
 	justify-content: space-between;
 	width:600px;
-	background-color: black;
-	height: 200px;
+	min-height: 200px;
 }
 
 .creadorpelisportada{
@@ -940,10 +947,9 @@ footer{
 	align-items: center;
 	width:600px;
 	height:100px;
-	background-color: black;
+
 
 }
-
 .creadorpelis input{
 	height: 20px;
 
@@ -958,6 +964,84 @@ footer{
 .creadorpelisinputbanner{
 	width: 64%;
 }
+
+
+.creadorpelisvid{
+	width: 600px;
+	height:450;
+}
+.creadorpelisvidinput{
+	width: 85%;
+	margin-bottom: 20px;
+	padding: 5px;
+
+}
+.creadorpelisvidbutton{
+	width: 14%;
+}
+
+
+.creadorpelisSipnosis{
+	width: 600px;
+	height:250px;
+	resize: none;
+	margin-bottom: 10px;
+	padding: 10px;
+	font-size: 15px;
+}
+
+.elenco{
+	width:600px;
+	padding: 20px;
+	display: flex;
+	position: relative;
+}
+
+.actorprincipal{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 25%;
+	height:200px;
+}
+.actorprincipalimg{
+	width:90%;
+	height:100px;
+	object-fit: contain;
+}
+
+.actorprincipalinputnombre{
+	margin-top: 2px;
+	width: 90%;
+
+}
+.actorprincipalinputimg{
+	margin-top: 2px;
+	width: 90%;
+	
+}
+
+.actorprincipalbutton{
+	width: 25%;
+	position: absolute;
+	bottom: 0;
+	z-index: 100;
+	left: 50%;
+}
+
+.subirpeli{
+	margin-top: 100px;
+	width: 600px;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+}
+
+.subirpeli input{
+	width: 50%;
+}
+
 
 /**/
 

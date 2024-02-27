@@ -31,6 +31,9 @@
 
     <section class="creadorpelis">
 
+
+        <input  class="creadorpelistit" placeholder="Título" type="text">
+
         <div class="creadorpelisimg">
 
             <div style='background-image: url("https://sm.ign.com/ign_es/cover/h/harry-pott/harry-potter-the-series_kv32.jpg");' class='creadorpelisportada'></div>
@@ -43,6 +46,60 @@
             <input class="creadorpelisinputportada" type="text" placeholder="Portada">
             <input class="creadorpelisinputbanner" type="text" placeholder="Banner">
             <input  type="button" onclick="actualizar()" value="Actualizar">
+
+        </div>
+
+
+
+        <div  class="creadorpelisvid">
+            <iframe class="creadorpelisvideo" width="600" height="400" src="//ok.ru/videoembed/1749288553149" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+
+            <input class="creadorpelisvidinput" type="text" placeholder="Enlace de pelicula">
+            <input onclick="actualizarVideo()" type="button" class="creadorpelisvidbutton" value="actualizar" >
+
+        </div>
+
+
+
+
+        <textarea class="creadorpelisSipnosis" maxlength="300" placeholder="Sipnosis"></textarea>
+
+        <!--
+        <h2>Elenco</h2>
+
+        <div class="elenco">
+            
+            <div class="actorprincipal">
+                <img class="actorprincipalimg" src="../img/Animacion/repartoBeeMovie/1.jpg"/>
+                <input class="actorprincipalinputnombre" placeholder="nombre">
+                <input class="actorprincipalinputimg" type="text" placeholder="enlace">
+            </div>
+            <div class="actorprincipal">
+                <img class="actorprincipalimg" src="../img/Animacion/repartoBeeMovie/2.jpg"/>
+                <input class="actorprincipalinputnombre" placeholder="nombre">
+                <input class="actorprincipalinputimg" type="text" placeholder="enlace">
+            </div>
+            <div class="actorprincipal">
+                <img class="actorprincipalimg" src="../img/Animacion/repartoBeeMovie/3.jpg"/>
+                <input class="actorprincipalinputnombre" placeholder="nombre">
+                <input class="actorprincipalinputimg" type="text" placeholder="enlace">
+            </div>
+            <div class="actorprincipal">
+                <img class="actorprincipalimg" src="../img/Animacion/repartoBeeMovie/4.jpg"/>
+                <input class="actorprincipalinputnombre" placeholder="nombre">
+                <input class="actorprincipalinputimg" type="text" placeholder="enlace">
+            </div>
+
+            <input class="actorprincipalbutton"onclick="actualizarElenco()" type="button" value="Actualizar" />
+
+        </div>
+
+        -->
+
+
+        <div class="subirpeli">
+
+            <input type="button" onclick="subirPelicula()" value="Subir" />
 
         </div>
 
@@ -118,6 +175,62 @@
         }
 
 
+        function actualizarVideo(){
+
+            let pelicula = document.getElementsByClassName("creadorpelisvideo")[0];
+            let inputvideo = document.getElementsByClassName("creadorpelisvidinput")[0];
+
+            if(inputvideo.value.length>3){
+                console.log(pelicula.src)
+                pelicula.src = inputvideo.value ;
+                console.log(pelicula.src)
+                inputvideo.value="";
+            }
+
+        }
+
+        function actualizarElenco(){
+
+            let actores = document.getElementsByClassName("actorprincipalimg");
+            let enlace = document.getElementsByClassName("actorprincipalinputimg");
+
+            for(let i =0; i<actores.length;i++){
+                actores[i].src=enlace[i].value;
+                enlace[i].value="";
+            }
+
+
+        }
+
+        function subirPelicula(){
+            let titulo = document.getElementsByClassName("creadorpelistit")[0].value;
+            let portada = document.getElementsByClassName("creadorpelisportada")[0].style.backgroundImage;
+            let banner = document.getElementsByClassName("creadorpelisbanner")[0].style.backgroundImage;
+            let video = document.getElementsByClassName("creadorpelisvideo")[0].src;
+            let sipnosis = document.getElementsByClassName("creadorpelisSipnosis")[0].value;
+            
+			
+			let data = new FormData();
+			data.append('titulo', titulo);
+            data.append('portada', portada);
+            data.append('banner', banner);
+            data.append('video', video);
+            data.append('sipnosis', sipnosis);
+
+			var xhttp2 = new XMLHttpRequest();
+			
+			//xhttp2.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xhttp2.onreadystatechange = function() {
+				if (this.readyState === 4 || this.status === 200){ 
+					location.href = 'gestorVideos2.php';
+				}       
+			};
+			xhttp2.open("POST", "gestorVideos2.php", true);
+            xhttp2.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xhttp2.send(data);
+
+
+		}
 
 
 

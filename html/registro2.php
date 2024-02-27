@@ -150,12 +150,12 @@ function myFunction(response) {
 		// Actualizar el XML
 		refreshXml(xmlDoc);
 
-		console.log(xmlDoc);
-
 
 	}
 
 	function refreshXml(response){
+
+		console.log(response)
 
 		var xhttp2 = new XMLHttpRequest();
 		xhttp2.open("POST", "registro3.php", true);
