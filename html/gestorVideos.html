@@ -32,37 +32,43 @@
     <section class="creadorpelis">
 
 
-        <input  class="creadorpelistit" placeholder="Título" type="text">
-
         <div class="creadorpelisimg">
 
-            <div style='background-image: url("https://sm.ign.com/ign_es/cover/h/harry-pott/harry-potter-the-series_kv32.jpg");' class='creadorpelisportada'></div>
-            <div style='background-image: url("https://static.posters.cz/image/hp/80594.jpg");' class='creadorpelisbanner'></div>
+            <div class="creadorpelisimgs">
+                <div style='background-image: url("../img/Animacion/beeMovie.jpg");' class='creadorpelisportada'></div>
 
-        </div>
+                <div style='background-image: url("https://static.posters.cz/image/hp/80594.jpg");' class='creadorpelisbanner'></div>
 
-        <div class="creadorpelisinputs">
-            
-            <input class="creadorpelisinputportada" type="text" placeholder="Portada">
-            <input class="creadorpelisinputbanner" type="text" placeholder="Banner">
-            <input  type="button" onclick="actualizar()" value="Actualizar">
-
-        </div>
+            </div>
 
 
-
-        <div  class="creadorpelisvid">
             <iframe class="creadorpelisvideo" width="600" height="400" src="//ok.ru/videoembed/1749288553149" frameborder="0" allow="autoplay" allowfullscreen></iframe>
 
-            <input class="creadorpelisvidinput" type="text" placeholder="Enlace de pelicula">
-            <input onclick="actualizarVideo()" type="button" class="creadorpelisvidbutton" value="actualizar" >
+        </div>
+
+
+
+        <div class="formcreador">
+
+
+            <form>
+
+                <input  class="creadorpelistit" placeholder="Título" type="text">
+                <input class="creadorpelisinputportada" type="text" placeholder="Portada">
+                <input class="creadorpelisinputbanner" type="text" placeholder="Banner">
+                <textarea class="creadorpelisSipnosis" maxlength="300" placeholder="Sipnosis"></textarea>
+                <input class="creadorpelisvidinput" type="text" placeholder="Enlace de pelicula">
+
+            </form>
+            
+
 
         </div>
 
 
 
 
-        <textarea class="creadorpelisSipnosis" maxlength="300" placeholder="Sipnosis"></textarea>
+
 
         <!--
         <h2>Elenco</h2>
@@ -95,17 +101,6 @@
         </div>
 
         -->
-
-
-        <div class="subirpeli">
-
-            <input type="button" onclick="subirPelicula()" value="Subir" />
-
-        </div>
-
-
-
-
 
     </section>
 
