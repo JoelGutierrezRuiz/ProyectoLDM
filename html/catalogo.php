@@ -4,10 +4,15 @@
 <?php
 	session_start(); //indicamos que vamos a usar sesiones
 	//comprobamos si la sesión está iniciada
+
+	$ussername = "..";
 	if (!(isset($_SESSION["username"]))){
 	   
 		header("Location: ../index.php");
 		
+	}else{
+		$ussername =$_SESSION["username"];
+		echo $ussername;
 	}
 
 	$xml = simplexml_load_file("../xml/peliculas.xml");
@@ -30,14 +35,21 @@
 	<header class="cabecera">
 
 		<div class="cabecera-comp comp-logo">
-			<h2>HULU</h2>
+		<a href="catalogo.php"><h2>HULU</h2></a>
 		</div>
 
 		<div class="cabecera-comp comp-usser ">
 			<h3 class="buscar">Buscar</h3>
 			<img src="../img/usser.png">
 			<ul>
-				<li><a>Configuración</a></li>
+				<li><a href="settings.html">Configuración</a></li>
+					<?php
+
+						if($ussername=="root123456"){
+							echo "<li><a href='gestorvideos.php'>Añadir peli</a></li>";
+						}
+					
+					?>
 				<li><form method="POST" action="cerrar_sesion.php">
                 <button type="submit">Cerrar Sesión</button></form></li>
 			</ul>
@@ -79,8 +91,9 @@
 		$titulo = $pelirecomend->titulo;
 		$sipnosis = $pelirecomend->sipnosis;
 		$anyo = $pelirecomend->anyo;
+		$id = $pelirecomend->id;
 
-		echo "<section class='recomendation'>
+		echo "<section id='$id' onclick='verpeli(this)' class='recomendation'>
 
 		<div class='recomendation-info'>
 
@@ -89,7 +102,7 @@
 			<p class='recomendation-year'>$anyo</p>
 		</div>
 
-		<div style='background-image: url($banner);' class='recomendation-banner'> <div class='recomendation-bannervisual'></div> </div>
+		<div  style='background-image: url($banner);' class='recomendation-banner'> <div class='recomendation-bannervisual'></div> </div>
 
 		</section>";
 
@@ -119,8 +132,9 @@
 					$titulo = $pelicula->titulo;
 					$sipnosis = $pelicula->sipnosis;
 					$anyo = $pelicula->anyo;
+					$id = $pelicula->id;
 
-					echo "<div style='background-image: url($banner);' class='peli-catalogo'></div>";
+					echo "<div onclick='verpeli(this)' id='$id' style='background-image: url($portada);' class='peli-catalogo'></div>";
 				}
 				
 				echo "</section>";
@@ -128,6 +142,17 @@
 
 			
 	?>
+
+	<script>
+		function verpeli(peli){
+			
+
+        	var urlDestino = "reproductor.php?id=" + encodeURIComponent(peli.getAttribute("id"));
+
+        	window.location.href = urlDestino;
+
+		}
+	</script>
 
 
 
