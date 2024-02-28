@@ -46,7 +46,7 @@
 					<?php
 
 						if($ussername=="root123456"){
-							echo "<li><a href='gestorvideos.php'>Añadir peli</a></li>";
+							echo "<li><a href='gestorVideos.php'>Añadir peli</a></li>";
 						}
 					
 					?>

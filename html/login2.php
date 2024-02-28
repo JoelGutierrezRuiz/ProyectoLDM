@@ -56,7 +56,6 @@ function myFunction(xml) {
 	xhttp.send(data);
 
 
-    */
 
 }
 </script>

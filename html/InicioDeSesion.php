@@ -140,10 +140,11 @@
 	</foter>
 
 	<script>
-		
+
+		var timestamp = new Date().getTime();
 
 		var xhttp = new XMLHttpRequest();
-		xhttp.open("GET", "../xml/usuariado.xml", true);
+		xhttp.open("GET", "../xml/usuariado.xml?timestamp=" + timestamp, true);
 		xhttp.send();
 
 

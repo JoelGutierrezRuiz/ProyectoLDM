@@ -157,6 +157,8 @@ function myFunction(response) {
 
 		console.log(response)
 
+
+
 		var xhttp2 = new XMLHttpRequest();
 		xhttp2.open("POST", "registro3.php", true);
 		xhttp2.setRequestHeader("Content-type", "application/xml");
