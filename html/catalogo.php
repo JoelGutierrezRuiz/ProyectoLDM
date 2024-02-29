@@ -40,9 +40,9 @@
 
 		<div class="cabecera-comp comp-usser ">
 			<h3 class="buscar">Buscar</h3>
-			<img src="../img/usser.png">
+			<img class="headerfoto"  src="../img/usser.png">
 			<ul>
-				<li><a href="settings.html">Configuración</a></li>
+				<li><a href="settings.php">Configuración</a></li>
 					<?php
 
 						if($ussername=="root123456"){
@@ -144,6 +144,63 @@
 	?>
 
 	<script>
+
+
+		var timestamp = new Date().getTime();
+		var xhttp = new XMLHttpRequest();
+		xhttp.open("GET", "../xml/usuariado.xml?timestamp=" + timestamp, true);
+		xhttp.onreadystatechange = function() {
+		if (this.readyState === 4 || this.status === 200){ 
+			verPerfil(this)
+		}       
+		};
+		xhttp.send();
+
+
+
+		function verPerfil(response){
+
+			let foto = document.getElementsByClassName("headerfoto")[0];
+
+			let xml = response.responseXML;
+
+
+
+			let ussers = xml.getElementsByTagName("usuario");
+			let passwords = xml.getElementsByTagName("contrasenya");
+
+
+			let login = '<?php echo $ussername; ?>';
+
+			let entrado = false;
+			let index = 0;
+
+			do{	
+				let aux = ussers[index].childNodes[0].nodeValue+passwords[index].childNodes[0].nodeValue;
+				if(aux===login){
+					entrado=true;
+					if(entrado){
+						//la iteracion acertada es el id 
+						let perfil = xml.getElementById(index);
+						foto.setAttribute("src",perfil.childNodes[9].getAttribute("src"));
+					}
+				}
+
+				index++;
+
+
+			}while(!entrado && index<ussers.length)
+
+
+
+		}
+
+
+
+
+
+
+
 		function verpeli(peli){
 			
 

@@ -1,4 +1,6 @@
 <?php
+
+session_unset(); //cerramos la sesión. También podemos hacer session_destroy();
 session_start(); //indicamos que vamos a usar sesiones
 
 //Recogemos las variables que nos envía por post

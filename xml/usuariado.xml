@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <usuariado>
 	<perfil id="0">
-		<nombre>root</nombre>
-		<mail>root@vereflix.es</mail>
-		<usuario>root</usuario>
-		<contrasenya>123456</contrasenya>
-	</perfil>
-	<perfil id="1">
-		<nombre>Andrés de Fonollosa</nombre>
-		<mail>andresF@gmail.com</mail>
-		<usuario>Berlin</usuario>
-		<contrasenya>bellachao</contrasenya>
+		<nombre>Joel</nombre>
+		<mail>joelgutie@gmail.com</mail>
+		<usuario>ruizxo</usuario>
+		<contrasenya>198024</contrasenya>
+		<imagen src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Pedro_S%C3%A1nchez_in_2023.jpg/220px-Pedro_S%C3%A1nchez_in_2023.jpg"/>
 	</perfil>
 
-	
-	<perfil id="2">
-		<nombre>La mesías</nombre>
-		<mail>flos@mariae.es</mail>
-		<usuario>mesias</usuario>
-		<contrasenya>vivaelpapa</contrasenya>
-	</perfil>
-	
-<perfil id="3"><nombre>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</nombre><mail>fsf@gmail.com</mail><usuario>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</usuario><contrasenya>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</contrasenya></perfil><perfil id="4"><nombre>&lt;&lt;&lt;&lt;&lt;&lt;</nombre><mail>fsf@gmail.com</mail><usuario>&lt;&lt;&lt;&lt;&lt;&lt;</usuario><contrasenya>&lt;&lt;&lt;&lt;&lt;&lt;</contrasenya></perfil><perfil id="5"><nombre>gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</nombre><mail>fsf@gmail.com</mail><usuario>gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</usuario><contrasenya>gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</contrasenya></perfil><perfil id="6"><nombre>Ampara</nombre><mail>fsf@gmail.com</mail><usuario>amparamorales</usuario><contrasenya>198024</contrasenya></perfil></usuariado>
+
+</usuariado>
