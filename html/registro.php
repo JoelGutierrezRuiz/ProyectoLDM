@@ -34,7 +34,7 @@
 			<div class="cabecera-logo-container">
 
 				<a href="../index.php">
-					<h2>HULU</h2>
+					<h2>QueVeo</h2>
 				</a>
 				
 			</div>

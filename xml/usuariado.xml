@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <usuariado>
 	<perfil id="0">
-		<nombre>Joel</nombre>
-		<mail>joelgutie@gmail.com</mail>
-		<usuario>ruizxo</usuario>
-		<contrasenya>198024</contrasenya>
-		<imagen src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Pedro_S%C3%A1nchez_in_2023.jpg/220px-Pedro_S%C3%A1nchez_in_2023.jpg"/>
+		<nombre>Amparo</nombre>
+		<mail>joelgutierrezruiz11@gmail.com</mail>
+		<usuario>root</usuario>
+		<contrasenya>123456</contrasenya>
+		<imagen src="https://upload.wikimedia.org/wikipedia/commons/f/f0/20230912_AmparoMorenoGarrig%C3%B3.jpg"/>
 	</perfil>
 
 
-</usuariado>
+<perfil id="1"><nombre>pedro</nombre><mail>fsf@gmail.com</mail><usuario>pedroabascal</usuario><contrasenya>198024</contrasenya></perfil><perfil id="2"><nombre>amparo</nombre><mail>Gutierrez@gmail.com</mail><usuario>mamparo</usuario><contrasenya>123456</contrasenya><imagen src="../img/usser.png"/></perfil></usuariado>

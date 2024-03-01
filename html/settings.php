@@ -30,23 +30,37 @@
 </head>
 <body>
 
-    <header class="cabecera">
+
+	<header class="cabecera">
 
 		<div class="cabecera-comp comp-logo">
-			<a href="catalogo.php"><h2>HULU</h2></a>
-			
+		<a href="catalogo.php"><h2>QueVeo</h2></a>
 		</div>
 
 		<div class="cabecera-comp comp-usser ">
-			<h3 class="buscar">Buscar</h3>
 			<img class="headerfoto"  src="../img/usser.png">
 			<ul>
-				<li><a>Configuración</a></li>
+					<?php
+
+						if($ussername=="root123456"){
+							echo "<li><a href='gestorVideos.php'>Añadir peli</a></li>";
+						}
+					
+					?>
+					<?php
+
+						if($ussername=="root123456"){
+							echo "<li><a href='inforoot.php'>Panel</a></li>";
+						}
+
+					?>
 				<li><form method="POST" action="cerrar_sesion.php">
-                <button type="submit">Cerrar Sesión</button></form></li>
+				<button type="submit">Cerrar Sesión</button></form></li>
 			</ul>
 		</div>
 	</header>
+
+
 
 
 
@@ -68,7 +82,7 @@
 
 				<div class="changeimg">
 					<button onclick="showPopUp()" class="changeupdate">Cambiar imagen</button>
-					<button class="changedelete">Borrar imagen</button>
+					<button onclick="borrarImagen()" class="changedelete">Borrar imagen</button>
 				</div>
 
 				<div style="display: none;" class="pupupchangeimg">
@@ -225,7 +239,7 @@
 					index++;
 
 
-				}while(index<ussers.length && repedito==false);
+				}while(index<ussers.length && repetido==false);
 
 				if(repetido==false){
 					actualizarPerfil()
@@ -433,6 +447,19 @@
 
 
 			
+		}
+
+
+
+		function borrarImagen(){
+
+			let imageurl = document.getElementsByClassName("pupupchangeimginput")[0];
+			imageurl.value="../img/usser.png"
+			filtroActualizar();
+
+
+
+
 		}
 
 	</script>

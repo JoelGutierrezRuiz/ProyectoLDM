@@ -33,24 +33,37 @@
 </head>
 <body>
 
-    <header class="cabecera">
+<header class="cabecera">
 
-		<div class="cabecera-comp comp-logo">
-			<a href="catalogo.php"><h2>HULU</h2></a>
-			
-		</div>
+	<div class="cabecera-comp comp-logo">
+	<a href="catalogo.php"><h2>QueVeo</h2></a>
+	</div>
 
-		<div class="cabecera-comp comp-usser ">
-			<h3 class="buscar">Buscar</h3>
-			<img class="headerfoto" src="../img/usser.png">
-			<ul>
-				<li><a href="settings.html">Configuración</a></li>
-				<li><a href="settings.php">Configuración</a></li>
-				<li><form method="POST" action="cerrar_sesion.php">
-                <button type="submit">Cerrar Sesión</button></form></li>
-			</ul>
-		</div>
-	</header>
+	<div class="cabecera-comp comp-usser ">
+		<img class="headerfoto"  src="../img/usser.png">
+		<ul>
+			<li><a href="settings.php">Configuración</a></li>
+				<?php
+
+					if($ussername=="root123456"){
+						echo "<li><a href='gestorVideos.php'>Añadir peli</a></li>";
+					}
+				
+				?>
+				<?php
+
+					if($ussername=="root123456"){
+						echo "<li><a href='inforoot.php'>Panel</a></li>";
+					}
+
+				?>
+			<li><form method="POST" action="cerrar_sesion.php">
+			<button type="submit">Cerrar Sesión</button></form></li>
+		</ul>
+	</div>
+</header>
+
+
 
 	<?php
 			// 1. Abrir el archivo XML

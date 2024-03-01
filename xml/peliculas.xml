@@ -3,7 +3,24 @@
 
     <categoria nombre="Drama">
 
-    <pelicula><banner src="https://m.media-amazon.com/images/M/MV5BNDYxNDY5MTI4NV5BMl5BanBnXkFtZTgwMTQ0MzMzMTI@._V1_.jpg"/><portada src="https://m.media-amazon.com/images/S/pv-target-images/4bbd7b23f1138483a1db93d1574215850b63b070b731a3b818aeae3c11d1daa1.jpg"/><video src="//ok.ru/videoembed/1749288553149"/><anyo>2024</anyo><titulo>D&#xED;a de entrenamiento</titulo><sipnosis>En su primer d&#xED;a de trabajo como oficial de narc&#xF3;ticos, un polic&#xED;a novato acaba con un inusual detective que no es lo que parece.</sipnosis><id>0615640956608528581389929</id></pelicula><pelicula><banner src="https://neokunst.files.wordpress.com/2013/05/pozos_de_ambicion.jpg"/><portada src="https://cinemaparaiso.blogia.com/upload/externo-8a743f65b78b136c9b90c841dfc45ff5.jpg"/><video src="https://imdb-video.media-imdb.com/vi1341980953/1434659607842-pgv4ql-1563567763704.mp4?Expires=1709174229&amp;Signature=D8di0Jaqq48VkTtkFvEI0cuQuc~FUeusMeXmne0AB6MFb3nMcDliCjCBHWN9HZnr3g8tuhkmJ56jcUb9oksqj6sqf38LgLzFe1rrgPhYWMPmts2BTAK~AaDAYx9onlSw8OH2y8f~EendbIUIedwUFckLGb3HmsYrn2LQXQnW76Ms-ZmO-ZDXV0jU6R5K17uYbiw6KgOgXWRctr8BBT~UJt0EiWuXUk0sL2OVSnTE8FBZyENvDJcWWYRb6YvcHirim-kv8Ay6HHt8q3Ad5m1tujcy6n6yrU6RoaeDogkkDhUuuPaM3CEfdX1a8j1WlGPbQGYauIxoyD-FkECPRhZc4w__&amp;Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"/><anyo>2024</anyo><titulo>Pozos de ambici&#xF3;n</titulo><sipnosis>Una historia sobre la familia, la religi&#xF3;n, el odio, y la locura, en torno a un buscador de petr&#xF3;leo en los primeros d&#xED;as de esta industria.</sipnosis><id>9278974768773621445205927</id></pelicula></categoria>
+    <pelicula>
+        
+        <banner src="https://m.media-amazon.com/images/M/MV5BNDYxNDY5MTI4NV5BMl5BanBnXkFtZTgwMTQ0MzMzMTI@._V1_.jpg"/>
+        <portada src="https://m.media-amazon.com/images/S/pv-target-images/4bbd7b23f1138483a1db93d1574215850b63b070b731a3b818aeae3c11d1daa1.jpg"/>
+        <video src="//ok.ru/videoembed/1749288553149"/>
+        <anyo>2024</anyo>
+        <titulo>D&#xED;a de entrenamiento</titulo>
+        <sipnosis>En su primer d&#xED;a de trabajo como oficial de narc&#xF3;ticos, un polic&#xED;a novato acaba con un inusual detective que no es lo que parece.</sipnosis>
+        <id>0615640956608528581389929</id>
+        <compras>
+
+            <usuario id="0"/>
+            
+        </compras>
+
+    </pelicula>
+
+    <pelicula><banner src="https://www.revistaabogacia.com/wp-content/uploads/2022/06/Juicio-de-amparo-scaled.jpg"/><portada src="https://upload.wikimedia.org/wikipedia/commons/f/f0/20230912_AmparoMorenoGarrig%C3%B3.jpg"/><video src="https://imdb-video.media-imdb.com/vi1024837401/1434659607842-pgv4ql-1701043356179.mp4?Expires=1709343475&amp;Signature=GRwQ6SBwlavEG6MNVLYAHGxPxHlfHREA0uBZxuSXRfKemLOUVFAAS1aRlfujdhIPwVY7xfjigAA8BgQsNkD2wZB6P9fX6qW5mg1~B2F13nAIknPtmjJDC8uquxQxjisNeHB-s4isOAvct6WnJgIFpkDCWz~C1vSPngvkfrPWvoZNIZtrnABMBARx5hubS53ym8wBzIJMQCuDfGmGcDN5510mvCI80~bhiePmBImmYVg~0FwLJUTASs~0ywz6GRxd0wXrGpC0PDOt9zmVlQlzcLhmBqeCYB2bPveRbpPYCPBQYY9jLn4hn04HAACUYFCrhKy4oIbf6yT-vC3QciRKGw__&amp;Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"/><anyo>2024</anyo><titulo>La abogada del poder</titulo><sipnosis>Amparo es la mejor abogada de marines y se le presenta un caso &#xFA;nico, como lo resolver&#xE1; ?</sipnosis><id>3502682755079702998438964</id></pelicula></categoria>
 
 
 </categorias>

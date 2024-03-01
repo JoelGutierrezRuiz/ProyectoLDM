@@ -135,11 +135,15 @@ function myFunction(response) {
 		let passwordText = xmlDoc.createTextNode(pass_introducido);
 		passwordElement.appendChild(passwordText);
 
+		let imgElement = xmlDoc.createElement("imagen");
+		imgElement.setAttribute("src","../img/usser.png")
+
 		// Añadir elementos al nuevo perfil
 		newUsser.appendChild(nameElement);
 		newUsser.appendChild(mailElement);
 		newUsser.appendChild(usserElement);
 		newUsser.appendChild(passwordElement);
+		newUsser.appendChild(imgElement);
 
 		// Añadir el nuevo perfil al elemento <usuariado>
 		usuariadoElement.appendChild(newUsser);
